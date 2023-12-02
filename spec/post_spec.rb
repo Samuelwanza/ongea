@@ -29,4 +29,7 @@ RSpec.describe Post, type: :model do
   it 'update_posts_counter should to function' do
     expect { subject.send(:update_posts_counter) }
   end
+  it 'expect recent comments to be 0 ' do
+    expect(subject.recent_comments.length).to eq(0)
+  end
 end
