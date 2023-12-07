@@ -1,0 +1,69 @@
+.user-card {
+  display: flex;
+  width: 100%;
+  padding: 5px;
+  gap: 100px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.image {
+  width: 120px;
+  border-radius: 10px;
+}
+
+.user-wrapper {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  box-shadow: 1px 2px 1px;
+  color: white;
+}
+
+.user-wrapper > p {
+  text-align: end;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bio {
+  width: 100%;
+  padding: 10px;
+  border-radius: 10px;
+  background-color: black;
+  box-shadow: 1px 2px 1px;
+  color: white;
+}
+
+.posts {
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.seelink {
+  text-decoration: none;
+  color: white;
+  background: black;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.btn-link {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.alignlikes {
+  justify-content: end;
+  display: flex;
+  width: 100%;
+}
+
+.alignlast {
+  display: flex;
+  justify-content: space-between;
+}
