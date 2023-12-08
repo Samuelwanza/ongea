@@ -1,40 +1,33 @@
-<div>
-  <div>image</div>
-  <div>
-    <h2>Username</h2>
-    <p>Number of posts:x</p>
+
+<div class="user-card">
+  <%= image_tag @user.photo, alt: 'User Avatar', class:"image"%>
+  <div class="user-wrapper">
+      <h2><%=@user.name%></h2>
+      <p>Number of posts:<%=@user.posts_counter%></p>
   </div>
 </div>
-<div>
+
+<div class="bio">
   <h2>Bio</h2>
   <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas dolor,
-    aspernatur, laboriosam alias praesentium voluptatem vel quidem quaerat
-    aliquam enim harum corrupti. Officiis animi dicta asperiores accusantium,
-    ducimus voluptatibus architecto?s
+    <%=@user.bio%>
   </p>
 </div>
-<div>
-  <h2>Post #1</h2>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos incidunt
-    assumenda dolore eos architecto est laboriosam id quo. Perferendis, non.
-  </p>
-  <span>Comments:x,likes:y</span>
+
+<% @user.recent_posts.each do |post|%>
+  <%=link_to post_path(@user,post) do %>
+    <div class="bio posts">
+      <h2><%=post.title%></h2>
+      <p>
+        <%=post.text%>
+      </p>
+      <div class="alignlikes">
+            <span>Comments:<%=post.comments_counter%>,likes:<%= post.likes_counter %></span>
+      </div>
+    </div>
+  <%end%>
+<%end%>
+<div class="btn-link">
+  <%=link_to "See all posts", posts_path(@user), class:"seelink"%> 
 </div>
-<div>
-  <h2>Post #2</h2>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos incidunt
-    assumenda dolore eos architescto est laboriosam id quo. Perferendis, non.
-  </p>
-  <span>Comments:x,likes:y</span>
-</div>
-<div>
-  <h2>Post #3</h2>
-  <p>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos incidunt
-    assumenda dolore eos architecto est laboriosam id quo. Perferendis, non.
-  </p>
-  <span>Comments:x,likes:y</span>
-</div>
+

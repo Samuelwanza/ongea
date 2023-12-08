@@ -1,35 +1,12 @@
-<div>
-    <div>image</div>
-    <div>
-        <h2>Username</h2>
-        <p>Number of posts:x</p>
-    </div>
-</div>
-<div>
-    <div>image</div>
-    <div>
-        <h2>Username</h2>
-        <p>Number of posts:x</p>
-    </div>
-</div>
-<div>
-    <div>image</div>
-    <div>
-        <h2>Username</h2>
-        <p>Number of posts:x</p>
-    </div>
-</div>
-<div>
-    <div>image</div>
-    <div>
-        <h2>Username</h2>
-        <p>Number of posts:x</p>
-    </div>
-</div>
-<div>
-    <div>image</div>
-    <div>
-        <h2>Username</h2>
-        <p>Number of posts:x</p>
-    </div>
-</div>
+<% @users.each do |user|%>
+    <%= link_to user_path(user) do %>
+        <div class="user-card">
+            <%= image_tag user.photo, alt: 'User Avatar', class:"image"%>
+            <div class="user-wrapper">
+                <h2><%=user.name%></h2>
+                <p>Number of posts:<%=user.posts_counter%></p>
+            </div>
+        </div>
+    <%end%>
+<% end%>
+
