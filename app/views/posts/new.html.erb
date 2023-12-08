@@ -1,0 +1,16 @@
+<div class="form-wrapper">
+    <h2>New Post</h2>
+    <%= form_with model: post, url: posts_url(@user), method: :post, local: true, scope: :post do |f| %>
+        <div class="form-item">
+            <%= f.label :Title %><br>
+            <%= f.text_field :title %>
+        </div>
+        <div class="form-item">
+            <%= f.label :Text %><br>
+            <%= f.text_field :text %>
+        </div>
+
+        <%= f.submit "Add Post" %>
+    <% end %>
+      
+</div>

@@ -1,0 +1,12 @@
+<div class="form-wrapper">
+    <h2>New Comment</h2>
+    <%= form_with model: comment, url: createcomments_url(@user,@post), method: :post, local: true, scope: :comment do |f| %>
+        <div class="form-item">
+            <%= f.label :Text %><br>
+            <%= f.text_field :text %>
+        </div>
+
+        <%= f.submit "Add Comment" %>
+    <% end %>
+      
+</div>

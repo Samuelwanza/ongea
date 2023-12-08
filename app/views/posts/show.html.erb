@@ -7,6 +7,7 @@
     <%= @post.text %>
   </p>
 </div>
+<%= button_to "Like", like_post_path(@user, @post), method: :post %>
 
 <ul>
   <% @post_comments.each do |comment| %>
