@@ -14,3 +14,8 @@
     <li><%= comment.user.name %>: <%= comment.text %></li>
   <% end %>
 </ul>
+
+<div class="btn-link">
+  <%=link_to "Add comment", comments_path(@user,@post), class:"seelink"%> 
+</div>
+
