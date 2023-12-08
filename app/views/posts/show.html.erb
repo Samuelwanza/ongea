@@ -7,9 +7,15 @@
     <%= @post.text %>
   </p>
 </div>
+<%= button_to "Like", like_post_path(@user, @post), method: :post %>
 
 <ul>
   <% @post_comments.each do |comment| %>
     <li><%= comment.user.name %>: <%= comment.text %></li>
   <% end %>
 </ul>
+
+<div class="btn-link">
+  <%=link_to "Add comment", comments_path(@user,@post), class:"seelink"%> 
+</div>
+
