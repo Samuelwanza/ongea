@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe 'user_index_path', type: :system do
   describe 'User_index_view' do
     before do
-      @users=User.all
+      @users = User.all
       visit users_path
     end
 
@@ -14,11 +14,11 @@ RSpec.describe 'user_index_path', type: :system do
     end
 
     it 'I can see the user\'s profile picture' do
-        @users.each do |u|
-          within ".user-card", text: u.name do
-            expect(find("img")['src']).to include u.photo
-          end
+      @users.each do |u|
+        within '.user-card', text: u.name do
+          expect(find('img')['src']).to include u.photo
         end
+      end
     end
 
     it 'I can see the number of posts each user has written.' do
@@ -36,18 +36,17 @@ RSpec.describe 'user_index_path', type: :system do
   end
 end
 
-
 RSpec.describe 'User index page', type: :system do
   describe 'User show page' do
     before(:each) do
       @user = User.first
-      @post=Post.first
+      @post = Post.first
 
       visit user_path(@user)
     end
 
     it 'I can see the user"s profile picture' do
-        expect(find("img")['src']).to include @user.photo
+      expect(find('img')['src']).to include @user.photo
     end
 
     it 'I can see the user"s username.' do
@@ -61,7 +60,6 @@ RSpec.describe 'User index page', type: :system do
     it 'I can see the user"s bio' do
       expect(page).to have_content @user.bio
     end
-
 
     it 'I can see a button that lets me view all of a user\'s posts.' do
       expect(page).to have_content(/See all posts/i)
@@ -77,6 +75,3 @@ RSpec.describe 'User index page', type: :system do
     end
   end
 end
-
-
-
