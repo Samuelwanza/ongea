@@ -36,7 +36,6 @@ RSpec.describe 'user_index_path', type: :system do
   end
 end
 
-
 RSpec.describe 'User index page', type: :system do
   describe 'User show page' do
     before(:each) do
@@ -61,7 +60,6 @@ RSpec.describe 'User index page', type: :system do
     it 'I can see the user"s bio' do
       expect(page).to have_content @user.bio
     end
-
 
     it 'I can see a button that lets me view all of a user\'s posts.' do
       expect(page).to have_content(/See all posts/i)
