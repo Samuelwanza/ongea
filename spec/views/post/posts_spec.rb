@@ -70,7 +70,6 @@ RSpec.describe 'Post show page', type: :system do
     @comment1 = Comment.create(post: @post, user: @user2, text: 'Great post!')
   end
 
-
   it "I can see the post's title." do
     visit post_path(@user, @post)
     expect(page).to have_content 'Hello'
