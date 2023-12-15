@@ -1,3 +1,4 @@
+require 'rails_helper'
 RSpec.describe 'Post show page', type: :system do
   before(:each) do
     @user = User.create(name: 'Tom', photo: 'https://unsplash.com/photos/F_-0BxGuVvo', bio: 'Teacher from Mexico.')
