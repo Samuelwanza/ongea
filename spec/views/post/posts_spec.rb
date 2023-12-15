@@ -10,8 +10,6 @@ RSpec.describe 'User post index page', type: :system do
     end
   end
 
-
-
   it 'I can see the user\'s profile picture' do
     visit posts_path(@user)
     expect(find('img')['src']).to include @user.photo
@@ -56,14 +54,12 @@ RSpec.describe 'User post index page', type: :system do
     expect(page).to have_content(/Likes: 0/i)
   end
 
-
   it 'When I click on a post, it redirects me to that post\'s show page.' do
     visit posts_path(@user)
     click_link 'Hello'
     expect(page).to have_content 'This is my first post'
   end
 end
-
 
 RSpec.describe 'Post show page', type: :system do
   before(:each) do
