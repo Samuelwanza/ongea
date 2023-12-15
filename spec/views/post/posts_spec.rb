@@ -92,7 +92,7 @@ RSpec.describe 'Post show page', type: :system do
 
   it 'I can see how many likes it has.' do
     visit post_path(@user, @post)
-    expect(page).to have_content 'Likes: 0' # Assuming there are no likes for simplicity
+    expect(page).to have_content 'Likes: 0'
   end
 
   it 'I can see the post body.' do
