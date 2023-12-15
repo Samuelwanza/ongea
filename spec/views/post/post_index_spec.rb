@@ -59,4 +59,10 @@ RSpec.describe 'User post index page as well pagination', type: :system do
     click_link 'Hello'
     expect(page).to have_content 'This is my first post'
   end
+
+  it 'When I click expect to see all posts' do
+    visit posts_path(@user)
+    click_link 'pagination'
+    expect(page).to have_content 'Hello'
+  end
 end
