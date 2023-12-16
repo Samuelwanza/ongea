@@ -79,7 +79,7 @@ a {
 form {
   background: black;
   color: white;
-  width: 300px;
+  width: 500px;
   height: 50vh;
 }
 
@@ -130,4 +130,47 @@ form > input:hover {
   transition: all 2s ease-in-out;
   background-color: white;
   color: green;
+}
+
+.form-sign {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form.new_user {
+  width: 50%;
+  background: white;
+  color: black;
+}
+
+form.new_user .field input,
+form.new_user .field textarea .actions input {
+  width: 80%;
+  padding: 8px;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 16px;
+  margin-bottom: 5px;
+  border: 1px rgb(196, 194, 194) solid;
+  outline: none;
+}
+
+#user_remember_me {
+  text-align: center;
+  width: 20%;
+}
+
+.form-sign-wrapper {
+  padding: 50px;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+input > {
+  width: 50%;
+  height: 20px;
 }
